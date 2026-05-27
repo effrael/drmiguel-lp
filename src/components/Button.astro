@@ -1,0 +1,31 @@
+<div class="relative group text-center">
+    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
+    <a
+        id="meta-whatsapp-btn"
+        href="https://wa.link/9l6fnb"
+        target="_blank"
+        class="whatsapp-trigger relative flex flex-col items-center justify-center w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white py-4 px-8 rounded-full shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+    >
+        <span class="pointer-events-none text-xl md:text-2xl font-bold uppercase tracking-wide">
+            ¡Agenda tu Cita Ahora!
+        </span>
+        <span class="pointer-events-none text-xs font-medium text-green-100 opacity-90 mt-1">
+            Clic aquí para verificar disponibilidad
+        </span>
+    </a>
+</div>
+
+<script is:inline>
+    const whatsappBtn = document.getElementById('meta-whatsapp-btn');
+
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', () => {
+            // En JavaScript puro no existe "as any", accedemos directo
+            const fbq = window.fbq;
+            
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact'); 
+            }
+        });
+    }
+</script>

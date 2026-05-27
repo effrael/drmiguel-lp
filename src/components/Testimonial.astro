@@ -1,0 +1,429 @@
+---
+// MISMOS DATOS QUE ANTES
+const videos = [
+    {
+        id: "Oriana",
+        src: "/Oriana.mp4",
+        poster: "/oriana.webp",
+        title: "Historia de Oriana",
+        desc: "Recuperación Rápida - 3 meses post-op",
+        thumbLabel: "Oriana ",
+        thumbSub: "Recuperación Rápida",
+    },
+    {
+        id: "Rossana",
+        src: "/Rossana.mp4",
+        poster: "/rossana.webp",
+        title: "Testimonio de Rossana",
+        desc: "Recuperación Total - 6 meses",
+        thumbLabel: "Rossana",
+        thumbSub: "Recuperación Total",
+    },
+];
+
+const initialVideo = videos[0];
+---
+
+<section
+    class="py-20 bg-neutral-950 relative overflow-hidden min-h-screen flex items-center justify-center"
+>
+    <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-yellow-900/20 via-neutral-950 to-neutral-950"
+    >
+    </div>
+
+    <div
+        class="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full blur-[1px] animate-twinkle"
+    >
+    </div>
+    <div
+        class="absolute bottom-1/3 right-1/4 w-1 h-1 bg-yellow-200 rounded-full blur-[1px] animate-twinkle delay-1000"
+    >
+    </div>
+
+    <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 relative z-10">
+        <div class="text-center mb-12">
+            <h2
+                class="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]"
+            >
+                Historias que <span
+                    class="text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 via-yellow-500 to-yellow-700"
+                    >Inspiran</span
+                >
+            </h2>
+            <p
+                class="text-neutral-400 text-sm tracking-[0.2em] uppercase font-normal"
+            >
+                Dr. Miguel Ángel
+            </p>
+        </div>
+
+        <div class="relative group mx-auto w-full max-w-[1100px]">
+            <div
+                class="absolute -inset-[3px] rounded-[2.1rem] bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent opacity-50 blur-sm animate-pulse-slow"
+            >
+            </div>
+            <div
+                class="absolute -inset-[1px] rounded-[2.1rem] overflow-hidden z-0"
+            >
+                <div
+                    class="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(transparent_0deg,transparent_80deg,#eab308_100deg,transparent_110deg,transparent_100%)] animate-spin-slow"
+                >
+                </div>
+            </div>
+
+            <div class="absolute -top-2 -left-2 z-20">
+                <svg
+                    class="w-8 h-8 text-yellow-200 animate-twinkle drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><path
+                        d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"
+                    ></path></svg
+                >
+            </div>
+            <div class="absolute -bottom-4 right-10 z-20">
+                <svg
+                    class="w-6 h-6 text-yellow-400 animate-twinkle delay-700 drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><path
+                        d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"
+                    ></path></svg
+                >
+            </div>
+
+            <div
+                class="relative z-10 bg-neutral-900 rounded-[2rem] border border-4 border-white/10 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 backdrop-blur-xl"
+            >
+                <div
+                    class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent z-20"
+                >
+                </div>
+                <div
+                    class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white/5 to-transparent pointer-events-none z-10"
+                >
+                </div>
+
+                <div
+                    class="lg:col-span-8 relative p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/5"
+                >
+                    <div
+                        class="relative w-full rounded-xl overflow-hidden bg-black shadow-[inset_0_0_20px_rgba(0,0,0,1)] aspect-video group/screen"
+                    >
+                        <video
+                            id="testimonialVideo"
+                            class="w-full h-full object-cover opacity-90 transition-opacity duration-500"
+                            controlslist="nodownload nofullscreen noremoteplayback"
+                            src={initialVideo.src}
+                            poster={initialVideo.poster}
+                            preload="none"
+                            playsinline
+                            webkit-playsinline
+                        >
+                        </video>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none"
+                        >
+                        </div>
+
+                        <div
+                            class="absolute bottom-6 left-6 z-20"
+                            id="videoInfoContainer"
+                        >
+                            <h3
+                                id="video-title"
+                                class="text-xl md:text-2xl font-bold text-white mb-1 drop-shadow-md"
+                            >
+                                {initialVideo.title}
+                            </h3>
+                            <p
+                                id="video-desc"
+                                class="text-yellow-500 text-xs font-semibold uppercase tracking-wider"
+                            >
+                                {initialVideo.desc}
+                            </p>
+                        </div>
+
+                        <div
+                            id="testimonialOverlay"
+                            class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer group/btn"
+                        >
+                            <div
+                                class="absolute w-24 h-24 bg-yellow-500/40 rounded-full blur-xl animate-pulse-slow group-hover/btn:scale-110 transition-transform"
+                            >
+                            </div>
+                            <div
+                                class="relative w-20 h-20 rounded-full bg-gradient-to-br from-yellow-200 via-yellow-600 to-yellow-800 shadow-[0_5px_15px_rgba(0,0,0,0.5),inset_0_2px_5px_rgba(255,255,255,0.4)] flex items-center justify-center border border-yellow-300/50 transform transition-transform duration-300 group-hover/btn:scale-105"
+                            >
+                                <div
+                                    class="absolute inset-[2px] rounded-full bg-gradient-to-br from-yellow-600 via-yellow-900 to-yellow-950 flex items-center justify-center"
+                                >
+                                    <svg
+                                        class="w-8 h-8 text-white ml-1 drop-shadow-lg"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                        ><path d="M8 5v14l11-7z"></path></svg
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            id="testimonialControls"
+                            class="absolute bottom-0 left-0 right-0 px-6 py-4 opacity-0 hidden flex items-center gap-4 z-30"
+                        >
+                            <button
+                                id="testPlayPauseBtn"
+                                class="text-white hover:text-yellow-400 transition-colors"
+                            >
+                                <svg
+                                    id="testPlayIcon"
+                                    class="w-6 h-6 hidden"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path d="M8 5v14l11-7z"></path></svg
+                                >
+                                <svg
+                                    id="testPauseIcon"
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"
+                                    ></path></svg
+                                >
+                            </button>
+                            <input
+                                type="range"
+                                id="testProgressBar"
+                                class="flex-1 h-[2px] bg-white/20 rounded-lg appearance-none cursor-pointer accent-yellow-500"
+                                min="0"
+                                max="100"
+                                value="0"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 bg-neutral-900/80 p-6 flex flex-col">
+                    <div
+                        class="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-3 max-h-[400px]"
+                    >
+                        {
+                            videos.map((video, index) => (
+                                <button
+                                    data-index={index}
+                                    data-src={video.src}
+                                    data-title={video.title}
+                                    data-desc={video.desc}
+                                    class={`video-btn relative w-full flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group overflow-hidden ${index === 0 ? "border-yellow-500/50 bg-yellow-900/10" : "border-white/5 hover:bg-white/5"}`}
+                                >
+                                    <div
+                                        class={`absolute left-0 top-0 bottom-0 w-[3px] bg-yellow-500 shadow-[0_0_10px_#eab308] transition-opacity ${index === 0 ? "opacity-100" : "opacity-0"}`}
+                                    />
+
+                                    <div class="w-16 h-12 rounded bg-neutral-800 border border-white/10 overflow-hidden shrink-0 relative">
+                                        <img
+                                            src={video.poster}
+                                            class="w-full h-full object-cover opacity-70 group-hover:opacity-100"
+                                            onerror="this.style.display='none'"
+                                        />
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black/30">
+                                            <div class="w-4 h-4 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                                                <svg
+                                                    class="w-2 h-2 text-white"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-left min-w-0">
+                                        <h4
+                                            class={`text-sm font-bold truncate ${index === 0 ? "text-white" : "text-neutral-400 group-hover:text-neutral-200"}`}
+                                        >
+                                            {video.thumbLabel}
+                                        </h4>
+                                        <p class="text-[10px] text-neutral-500 truncate">
+                                            {video.thumbSub}
+                                        </p>
+                                    </div>
+                                </button>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    // MISMO SCRIPT JAVASCRIPT DE ANTES
+    document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("testimonialVideo");
+        const overlayBtn = document.getElementById("testimonialOverlay");
+        const controls = document.getElementById("testimonialControls");
+        const playPauseBtn = document.getElementById("testPlayPauseBtn");
+        const playIcon = document.getElementById("testPlayIcon");
+        const pauseIcon = document.getElementById("testPauseIcon");
+        const progressBar = document.getElementById("testProgressBar");
+        const titleEl = document.getElementById("video-title");
+        const descEl = document.getElementById("video-desc");
+        const infoContainer = document.getElementById("videoInfoContainer");
+        const listButtons = document.querySelectorAll(".video-btn");
+
+        window.loadTestimonial = (btn) => {
+            const src = btn.dataset.src;
+            const title = btn.dataset.title;
+            const desc = btn.dataset.desc;
+
+            listButtons.forEach((b) => {
+                b.classList.remove("border-yellow-500/50", "bg-yellow-900/10");
+                b.classList.add("border-white/5");
+                b.querySelector(".absolute.left-0").classList.add("opacity-0");
+                b.querySelector("h4").classList.remove("text-white");
+                b.querySelector("h4").classList.add("text-neutral-400");
+            });
+
+            btn.classList.remove("border-white/5");
+            btn.classList.add("border-yellow-500/50", "bg-yellow-900/10");
+            btn.querySelector(".absolute.left-0").classList.remove("opacity-0");
+            btn.querySelector("h4").classList.add("text-white");
+            btn.querySelector("h4").classList.remove("text-neutral-400");
+
+            infoContainer.style.opacity = "0";
+            setTimeout(() => {
+                titleEl.innerText = title;
+                descEl.innerText = desc;
+                infoContainer.style.opacity = "1";
+            }, 200);
+
+            video.src = src;
+            video.load();
+            video.play().then(() => {
+                overlayBtn.classList.add("hidden");
+                controls.classList.remove("hidden");
+                controls.classList.remove("opacity-0");
+                updateIcons(true);
+            });
+        };
+
+        listButtons.forEach((btn) =>
+            btn.addEventListener("click", () => window.loadTestimonial(btn)),
+        );
+
+        overlayBtn.addEventListener("click", () => {
+            video.play().then(() => {
+                overlayBtn.classList.add("hidden");
+                controls.classList.remove("hidden");
+                controls.classList.remove("opacity-0");
+                updateIcons(true);
+            });
+        });
+
+        playPauseBtn.addEventListener("click", () => {
+            if (video.paused) {
+                video.play();
+                updateIcons(true);
+            } else {
+                video.pause();
+                updateIcons(false);
+            }
+        });
+
+        video.addEventListener("timeupdate", () => {
+            const percentage = (video.currentTime / video.duration) * 100 || 0;
+            progressBar.value = percentage;
+            progressBar.style.background = `linear-gradient(to right, #eab308 ${percentage}%, rgba(255,255,255,0.2) ${percentage}%)`;
+        });
+
+        progressBar.addEventListener("input", () => {
+            video.currentTime = (progressBar.value / 100) * video.duration;
+        });
+
+        video.addEventListener("ended", () => {
+            updateIcons(false);
+            overlayBtn.classList.remove("hidden");
+            controls.classList.add("opacity-0");
+        });
+
+        function updateIcons(isPlaying) {
+            if (isPlaying) {
+                playIcon.classList.add("hidden");
+                pauseIcon.classList.remove("hidden");
+            } else {
+                playIcon.classList.remove("hidden");
+                pauseIcon.classList.add("hidden");
+            }
+        }
+    });
+</script>
+
+<style>
+    /* ANIMACIONES PERSONALIZADAS */
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes twinkle {
+        0%,
+        100% {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 4s linear infinite; /* AJUSTA LA VELOCIDAD DEL BORDE AQUÍ */
+    }
+    .animate-twinkle {
+        animation: twinkle 3s ease-in-out infinite;
+    }
+
+    /* Estilos del Input Range */
+    input[type="range"] {
+        -webkit-appearance: none;
+        background: transparent;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #eab308;
+        cursor: pointer;
+        margin-top: -4px;
+        box-shadow: 0 0 10px #eab308;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+    }
+
+    /* Scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #404040;
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #eab308;
+    }
+</style>

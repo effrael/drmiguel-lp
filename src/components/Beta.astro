@@ -1,0 +1,142 @@
+---
+import Button from "./Button.astro";    
+---
+
+<section class="py-20 bg-[#050505]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-4">
+                Preguntas Frecuentes
+            </h2>
+            <div class="w-20 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex cursor-pointer items-center justify-between gap-1.5 rounded-2xl bg-neutral-900 p-6 text-white transition hover:bg-neutral-800 border border-neutral-800 group-open:border-yellow-500/50"
+                >
+                    <h3 class="font-medium text-lg">
+                        ¿Cuánto tiempo tarda la recuperación?
+                    </h3>
+                    <span
+                        class="shrink-0 rounded-full bg-neutral-800 p-1.5 text-yellow-500 sm:p-3 group-open:bg-yellow-500 group-open:text-black transition"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="mt-2 px-6 pb-6 text-neutral-400 leading-relaxed">
+                    <p>
+                        La recuperación varía según cada paciente, pero
+                        generalmente podrás retomar actividades ligeras en 3 a 5
+                        días. El Dr. Miguel utiliza técnicas mínimamente
+                        invasivas para acelerar este proceso.
+                    </p>
+                </div>
+            </details>
+
+            <details class="group [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex cursor-pointer items-center justify-between gap-1.5 rounded-2xl bg-neutral-900 p-6 text-white transition hover:bg-neutral-800 border border-neutral-800 group-open:border-yellow-500/50"
+                >
+                    <h3 class="font-medium text-lg">
+                        ¿Es doloroso el procedimiento?
+                    </h3>
+                    <span
+                        class="shrink-0 rounded-full bg-neutral-800 p-1.5 text-yellow-500 sm:p-3 group-open:bg-yellow-500 group-open:text-black transition"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="mt-2 px-6 pb-6 text-neutral-400 leading-relaxed">
+                    <p>
+                        La molestia es mínima y totalmente controlable.
+                        Utilizamos anestesia especializada y técnicas suaves. La
+                        mayoría de pacientes describen la sensación posterior
+                        como haber hecho mucho ejercicio.
+                    </p>
+                </div>
+            </details>
+
+            <details class="group [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex cursor-pointer items-center justify-between gap-1.5 rounded-2xl bg-neutral-900 p-6 text-white transition hover:bg-neutral-800 border border-neutral-800 group-open:border-yellow-500/50"
+                >
+                    <h3 class="font-medium text-lg">
+                        ¿Dónde se realizan las cirugías?
+                    </h3>
+                    <span
+                        class="shrink-0 rounded-full bg-neutral-800 p-1.5 text-yellow-500 sm:p-3 group-open:bg-yellow-500 group-open:text-black transition"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="mt-2 px-6 pb-6 text-neutral-400 leading-relaxed">
+                    <p>
+                        Operamos exclusivamente en clínicas certificadas que
+                        cuentan con UCI y todos los protocolos de seguridad
+                        aprobados por la autoridad de salud.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <div
+            class="mt-24 text-center max-w-4xl mx-auto bg-gradient-to-b from-neutral-900 to-black border border-neutral-800 p-8 md:p-12 rounded-3xl relative overflow-hidden group"
+        >
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"
+            >
+            </div>
+
+            <div
+                class="absolute inset-0 bg-yellow-500/5 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
+            >
+            </div>
+
+            <h3
+                class="text-2xl md:text-3xl font-bold text-white mb-4 relative z-10"
+            >
+                ¿Estás lista para dejar de gastar en dietas, fajas y
+                tratamientos que no te dan resultados reales?
+            </h3>
+            <p
+                class="text-yellow-500 text-xl font-medium mb-8 italic relative z-10"
+            >
+                Lipoescultura que Transforma tu Cuerpo
+            </p>
+
+            <Button />
+        </div>
+    </div>
+</section>

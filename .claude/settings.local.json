@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.facebook.com)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git rm:*)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --index-filter \"git rm --cached --ignore-unmatch public/landing_miguel.mp4\" --prune-empty --tag-name-filter cat -- --all)",
+      "Bash(git add:*)",
+      "Bash(rm -rf .git)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)"
+    ]
+  }
+}
